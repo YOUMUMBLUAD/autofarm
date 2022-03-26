@@ -1,0 +1,101 @@
+function byypass()
+        game["RunService"].Stepped:Connect(function()
+            game.Players.LocalPlayer.Character:FindFirstChild("lolxd555")
+                :Destroy()
+        end)
+
+        game["RunService"].Stepped:Connect(function()
+            game.Players.LocalPlayer.Character:FindFirstChild("lolxd6")
+                :Destroy()
+        end)
+
+        game["RunService"].Stepped:Connect(function()
+            game.Players.LocalPlayer.Character:FindFirstChild("Script")
+                :Destroy()
+        end)
+    end
+
+    byypass()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "HARLEMHUB SL2 AUTOFARM",
+        Text = "USE FLOAT COMMAND FROM INF YIELD",
+        Icon = "",
+        Duration = 5
+
+    })
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+        game:GetService("Workspace").TeleportsBack.Urban.CFrame
+    wait(0.2)
+    game:GetService("ReplicatedStorage").DoorService:FireServer("Urban")
+    wait(4)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(
+                                                                     -150.622452,
+                                                                     -345.818756,
+                                                                     1329.16333,
+                                                                     -0.991419077,
+                                                                     -3.22523448e-08,
+                                                                     0.130721748,
+                                                                     -2.5346008e-08,
+                                                                     1,
+                                                                     5.44961196e-08,
+                                                                     -0.130721748,
+                                                                     5.07152187e-08,
+                                                                     -0.991419077)
+    wait(1)
+    game:GetService("ReplicatedStorage").test:FireServer(game.Players
+                                                             .LocalPlayer,
+                                                         "Urban")
+
+_G.True = true
+AutoFarmPage:Toggle("Farm", function(Value)
+    if Value == true then
+        _G.True = true
+        while _G.True == true do
+            wait()
+            pcall(function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(-150.622452, -345.818756, 1329.16333,
+                               -0.991419077, -3.22523448e-08, 0.130721748,
+                               -2.5346008e-08, 1, 5.44961196e-08, -0.130721748,
+                               5.07152187e-08, -0.991419077)
+                wait(0.1)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(-150.622452, -345.818756, 1329.16333,
+                               -0.991419077, -3.22523448e-08, 0.130721748,
+                               -2.5346008e-08, 1, 5.44961196e-08, -0.130721748,
+                               5.07152187e-08, -0.991419077)
+                wait(0.1)
+                game:GetService("ReplicatedStorage").test:FireServer(
+                    game.Players.LocalPlayer, "Urban")
+
+                repeat
+                    mouse1click()
+                    wait()
+                until game.Players.LocalPlayer.Backpack.Crate
+
+                game.Players.LocalPlayer.Backpack.Crate.Parent = game.Players
+                                                                     .LocalPlayer
+                                                                     .Character
+                wait(7)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(263.355957, 4.30828381, -241.12471, -0.877513409,
+                               1.70748731e-08, -0.47955212, -7.53412355e-09, 1,
+                               4.93922698e-08, 0.47955212, 4.69553854e-08,
+                               -0.877513409)
+                wait(0.4)
+                game:GetService("Players").LocalPlayer.Character.Crate.Script
+                    .RemoteEvent:FireServer()
+                wait(0.2)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
+                    CFrame.new(-150.622452, -345.818756, 1329.16333,
+                               -0.991419077, -3.22523448e-08, 0.130721748,
+                               -2.5346008e-08, 1, 5.44961196e-08, -0.130721748,
+                               5.07152187e-08, -0.991419077)
+                repeat wait() until wait(2)
+            end)
+        end
+    else
+        _G.True = false
+
+    end
+end)
